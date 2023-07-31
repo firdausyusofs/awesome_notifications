@@ -248,6 +248,10 @@ public class SwiftAwesomeNotificationsPlugin:
                 case Definitions.CHANNEL_METHOD_GET_UTC_TIMEZONE_IDENTIFIER:
                     try channelMethodGetUTCTimeZoneIdentifier(call: call, result: result)
                     return
+
+                case Definitions.CHANNEL_METHOD_GET_APP_LIFE_CYCLE:
+                    try channelMethodGetLifeCycle(call: call, result: result)
+                    return
                     
                 case Definitions.CHANNEL_METHOD_GET_LOCAL_TIMEZONE_IDENTIFIER:
                     try channelMethodGetLocalTimeZoneIdentifier(call: call, result: result)
@@ -730,6 +734,13 @@ public class SwiftAwesomeNotificationsPlugin:
             awesomeNotifications?
                 .getUtcTimeZone()
                 .identifier ?? "UTC")
+    }
+
+    private func channelMethodGetLifeCycle(call: FlutterMethodCall, result: @escaping FlutterResult) throws {
+        result(
+            awesomeNotifications?
+                .getApplicationLifeCycle()
+        )
     }
     
     private func channelMethodGetLocalTimeZoneIdentifier(call: FlutterMethodCall, result: @escaping FlutterResult) throws {

@@ -269,6 +269,10 @@ public class AwesomeNotifications:
         get { return LifeCycleManager.shared.currentLifeCycle }
         set { LifeCycleManager.shared.currentLifeCycle = newValue }
     }
+
+    public func getApplicationLifeCycle() -> NotificationLifeCycle {
+        return LifeCycleManager.shared.getApplicationLifeCycle()
+    }
     
     // *****************************  DRAWABLE FUNCTIONS  **********************************
     

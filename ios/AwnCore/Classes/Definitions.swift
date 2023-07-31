@@ -70,6 +70,7 @@ public enum Definitions {
     public static let  CHANNEL_METHOD_CREATE_NOTIFICATION = "createNewNotification"
     public static let  CHANNEL_METHOD_SET_ACTION_HANDLE = "setActionHandle"
     public static let  CHANNEL_METHOD_SILENT_CALLBACK = "silentCallbackReference"
+    public static let  CHANNEL_METHOD_GET_APP_LIFE_CYCLE = "getAppLifeCycle"
 
     public static let  CHANNEL_METHOD_GET_FCM_TOKEN = "getFirebaseToken"
     public static let  CHANNEL_METHOD_NEW_FCM_TOKEN = "newTokenReceived"
